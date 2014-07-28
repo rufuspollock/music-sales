@@ -1,0 +1,79 @@
+{
+  "name": "music-sales",
+  "title": "Recorded Music Sales 1969-Present",
+  "homepage": "https://github.com/rgrp/music-sales",
+  "version": "0.1.0",
+  "license": "PDDL-1.0",
+  "sources": [{
+    "name": "Recording Industry in Numbers",
+    "web": "http://rin.ifpi.org/"
+  }],
+  "resources": [
+    {
+      "name": "data",
+      "path": "data/data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "integer",
+            "description": ""
+          },
+          {
+            "name": "Singles",
+            "type": "integer",
+            "description": "Millions of units"
+          },
+          {
+            "name": "LPs",
+            "type": "integer",
+            "description": "Millions of units"
+          },
+          {
+            "name": "MCs",
+            "type": "integer",
+            "description": "Millions of units"
+          },
+          {
+            "name": "CDs",
+            "type": "integer",
+            "description": "Millions of units"
+          },
+          {
+            "name": "Music Video",
+            "type": "integer",
+            "description": "Millions of units"
+          },
+          {
+            "name": "Total Units",
+            "type": "integer",
+            "description": "Millions of units"
+          },
+          {
+            "name": "Sales (Nominal)",
+            "type": "integer",
+            "description": "Sales in $US (variable)"
+          },
+          {
+            "name": "Sales (Real)",
+            "type": "integer",
+            "description": "Sales in Real $US (2004 ARP)"
+          }
+        ]
+      }
+    }
+  ],
+  "views": [
+    {
+      "id": "Graph",
+      "type": "Graph",
+      "state": {
+        "graphType": "lines-and-points",
+        "group": "Year",
+        "series": [ "Sales (Real)" ]
+      }
+    }
+  ]
+}
