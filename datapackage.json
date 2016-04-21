@@ -52,12 +52,12 @@
             "description": "Millions of units"
           },
           {
-            "name": "Sales (Nominal)",
+            "name": "Sales - Nominal",
             "type": "integer",
             "description": "Sales in $US (variable)"
           },
           {
-            "name": "Sales (Real)",
+            "name": "Sales - Real",
             "type": "integer",
             "description": "Sales in Real $US (2004 ARP)"
           }
@@ -72,7 +72,7 @@
       "state": {
         "graphType": "lines-and-points",
         "group": "Year",
-        "series": [ "Sales (Real)" ]
+        "series": [ "Sales - Real" ]
       }
     }
   ]
